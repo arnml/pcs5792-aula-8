@@ -4,9 +4,10 @@ def armstrong_number(number):
     """
     calc = number
     sum_ = 0
+    digits = len(str(number))
     while calc > 0:
         dig = calc % 10
-        sum_ += dig ** 3
+        sum_ += dig ** digits
         calc //= 10
     if number == sum_:
         return True

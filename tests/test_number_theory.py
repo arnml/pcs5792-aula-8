@@ -79,9 +79,8 @@ class TestArmstrongNumbers(unittest.TestCase):
     def test_zero(self):
         self.assertTrue(armstrong_number(0))
 
-    @unittest.expectedFailure
     def test_four_digit_armstrong_number(self):
-        # 1634 = 1^4 + 6^4 + 3^4 + 4^4, but the implementation hard-codes ** 3.
+        # 1634 = 1^4 + 6^4 + 3^4 + 4^4.
         self.assertTrue(armstrong_number(1634))
 
 
