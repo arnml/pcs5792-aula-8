@@ -11,7 +11,7 @@ jobs:
       - name: Obter projeto
         uses: actions/checkout@v6
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
       - name: Instalar dependências
@@ -23,4 +23,6 @@ jobs:
           coverage run --source=src -m unittest discover -s tests
           coverage report -m
       - name: Analisar código
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
         run: pylint --errors-only src tests
