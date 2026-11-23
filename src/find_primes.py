@@ -63,7 +63,7 @@ def prime_check(num):
     Checks if a single number is prime.
     A simple function, not a speedy solution.
     """
-    if num == 1:
+    if num <= 1:
         return False
 
     upper_bound = int(math.sqrt(num) + 1)
