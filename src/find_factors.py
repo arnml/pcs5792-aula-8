@@ -36,5 +36,8 @@ def prime_factors(num):
             num = num // prime      # Divides the number by the prime, so that we can see how many times
             factors.append(prime)   # a number is divisible by a prime
 
+    if num > 1:
+        factors.append(num)
+
     return factors
     
