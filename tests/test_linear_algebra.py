@@ -79,7 +79,6 @@ class TestNorms(unittest.TestCase):
         with self.assertRaises(ValueError):
             linf_norm([])
 
-    @unittest.expectedFailure
     def test_l2_norm_is_euclidean_norm(self):
         self.assertAlmostEqual(l2_norm([3, 4]), 5.0)
 

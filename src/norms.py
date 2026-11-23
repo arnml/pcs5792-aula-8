@@ -8,7 +8,7 @@ def l2_norm(lst):
     """
     Calculates the l2 norm of a list of numbers
     """
-    return sum([x*x for x in lst])
+    return sum(x * x for x in lst) ** 0.5
     
 def linf_norm(lst):
     """
