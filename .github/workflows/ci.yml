@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v6
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Instalar dependências
+        run: python -m pip install -r requirements.txt
+      - name: Executar testes
+        run: python -m unittest discover -s tests -v
+      - name: Medir cobertura
+        run: |
+          coverage run --source=src -m unittest discover -s tests
+          coverage report -m
+      - name: Analisar código
+        run: pylint --errors-only src tests
