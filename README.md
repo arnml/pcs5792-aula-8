@@ -6,3 +6,7 @@ The project will be mostly for educational purposes, and can be used by anyone w
 
 You may also, if you so desire, contribute to the project.
 The idea is to use as few external libraries as possible, and only use built-in Python libraries.
+
+## Aula 8 - Integração contínua
+
+Veja o [relato da atividade](RELATO.md), com as correções, os resultados do CI e as capturas de tela.

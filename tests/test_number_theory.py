@@ -197,9 +197,7 @@ class TestFindFactors(unittest.TestCase):
     def test_prime_factors_of_one(self):
         self.assertEqual(prime_factors(1), [])
 
-    #@unittest.expectedFailure
     def test_prime_factors_of_a_prime(self):
-        # Primes below n are sieved, so the remaining prime itself is never emitted.
         self.assertEqual(prime_factors(13), [13])
 
 
@@ -334,10 +332,7 @@ class TestTotient(unittest.TestCase):
             with self.subTest(n=n):
                 self.assertEqual(totient(n), value)
 
-    #@unittest.expectedFailure
     def test_totient_of_a_prime(self):
-        # phi(p) == p - 1; the prime-factor helper returns [] for primes,
-        # so the current implementation returns p instead.
         self.assertEqual(totient(13), 12)
 
 
